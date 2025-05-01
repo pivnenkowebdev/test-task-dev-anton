@@ -1,0 +1,50 @@
+@use '../core/vars';
+
+@mixin bg-gradient-img($gradient, $image: null) {
+    @if $image != null {
+        background-image: $gradient, url(#{$image});
+    } @else {
+        background-image: $gradient;
+    }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin gradient-border(
+    $radius: 15px,
+    $border-size: 3px,
+    $border-color: vars.$white100,
+    $inner-bg: transparent
+    ) {
+    position: relative;
+    box-sizing: border-box;
+    z-index: 0;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &::before {
+        content: "";
+        background: $border-color;
+        border-radius: $radius;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+    }
+
+    &::after {
+        content: "";
+        background: $inner-bg;
+        border-radius: $radius;
+        z-index: -1;
+        width: calc(100% - $border-size * 2);
+        height: calc(100% - $border-size * 2);
+    }
+}

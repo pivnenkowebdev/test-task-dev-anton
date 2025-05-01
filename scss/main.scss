@@ -1,3 +1,9 @@
 // base
 @use './core/normalize.scss';
 @use './core/base.scss';
+
+// sections
+@use './components/sections/header';
+
+// blocks
+@use './components/blocks/hero';

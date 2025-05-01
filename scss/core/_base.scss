@@ -1,3 +1,8 @@
+// variables and mixins
+@use './_vars.scss';
+@use './mixins' as *;
+
+// fonts
 @font-face {
     font-family: 'Montserrat';
     src: url('../../fonts/Montserrat-VariableFont_wght.ttf') format('ttf');
@@ -6,6 +11,7 @@
     font-style: normal italic;
 }
 
+// some reset styles
 body,
 html,
 *, *>* {
@@ -14,7 +20,28 @@ html,
     box-sizing: border-box;
 }
 
-.test {
+body {
     font-family: 'Montserrat', sans-serif;
-    color: red;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button,
+input,
+textarea {
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+// basic style
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.footer {
+    margin-top: auto;
 }
