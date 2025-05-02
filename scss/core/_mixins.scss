@@ -1,8 +1,12 @@
 @use '../core/vars';
 
-@mixin bg-gradient-img($gradient, $image: null) {
-    @if $image != null {
-        background-image: $gradient, url(#{$image});
+@mixin bg-gradient-img($gradient, $image1: null, $image2: null) {
+    @if $image1 != null and $image2 != null {
+        background-image: $gradient, url(#{$image1}), url(#{$image2});
+    } @else if $image1 != null {
+        background-image: $gradient, url(#{$image1});
+    } @else if $image2 != null {
+        background-image: $gradient, url(#{$image2});
     } @else {
         background-image: $gradient;
     }
@@ -47,4 +51,14 @@
         width: calc(100% - $border-size * 2);
         height: calc(100% - $border-size * 2);
     }
+}
+
+@mixin text-style-stroke($color: vars.$black100, $size, $weight, $stroke-color, $stroke-width) {
+    font-size: $size;
+    font-weight: $weight;
+    color: transparent;
+    -webkit-text-stroke: $stroke-width $stroke-color;
+    // Firefox
+    text-shadow: 
+    0 0 0 $stroke-color;
 }

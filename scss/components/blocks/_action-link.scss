@@ -1,0 +1,27 @@
+@use '../../core/vars';
+
+.action-link {
+    display: inline-block;
+    padding: 16px 34px 19px;
+    font-weight: 700;
+    font-size: 26px;
+    color: vars.$white100;
+    text-decoration: none;
+    background: vars.$greenLinear;
+    border-radius: 20px;
+    letter-spacing: 0.9px;
+    text-align: center;
+
+
+    @media(hover: hover) {
+        &:hover {
+            cursor: pointer;
+            background: vars.$lightGreenLinear;
+            box-shadow: 0 0 20px rgba(131, 233, 53, 0.6);
+        }
+    }
+
+    @media (min-width: 768px) {
+        font-size: 40px;
+    }
+}

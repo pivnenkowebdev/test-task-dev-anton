@@ -1,0 +1,252 @@
+@use '../../core/vars';
+@use '../../core/mixins' as *;
+
+.main-header {
+    position: relative;
+    overflow: hidden;
+    height: 573px;
+
+    @media (min-width: 768px) {
+        height: 918px;
+    }
+
+    @media (min-width: 1920px) {
+        height: 809px;
+    } 
+
+    @include bg-gradient-img(vars.$darkBlueGradientBg, '../../../img/sparks-bg.png', '../../../img/bg-orange-sparks.png');
+    
+    .container {
+        height: inherit;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 150px;
+        @include bg-gradient-img(vars.$darkBlueGradient);
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 6%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        width: 300px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../../../img/icons/shadow-circle.svg);
+        filter: blur(8px);
+
+        @media (min-width: 768px) {
+            width: 500px;
+            height: 500px;
+        }
+    }
+
+    &__content {
+        padding: 15px 0 36px;
+        height: inherit;
+
+        @media (min-width: 768px) {
+            padding: 37px 0 50px;
+        }  
+        
+        @media (min-width: 1920px) {
+            padding: 60px 0 50px;
+        }    
+    }
+
+    &__pic {
+        position: absolute;
+    }
+
+    &__pic--diamond-blur {
+        width: 90px;
+        left: -52px;
+        top: 29.5%;
+        transform: rotate(-35deg);
+
+        @media (min-width: 768px) {
+            width: 222px;
+            left: -117px;
+            top: 19.4%;
+            transform: rotate(-35deg);
+        }
+
+        @media (min-width: 1920px) {
+            width: 183px;
+            left: 47%;
+            top: -11.3%;
+            transform: rotate(1deg);
+        } 
+    }
+
+    &__pic--diamond-quality {
+        width: 60px;
+        right: -34px;
+        top: 15%;
+        transform: rotate(107deg);
+
+        @media (min-width: 768px) {
+            width: 149px;
+            right: -73px;
+            top: 10.6%;
+            transform: rotate(106deg);
+            z-index: 5;
+        }
+
+        @media (min-width: 1920px) {
+            top: auto;
+            width: 166px;
+            bottom: 10.2%;
+            left: -3.1%;
+            transform: rotate(1deg);
+        } 
+    }
+
+    &__pic--diamond-pink {
+        width: 82px;
+        bottom: 11%;
+        left: 55%;
+        transform: rotate(-12deg);
+        z-index: 1;
+
+        @media (min-width: 768px) {
+            width: 161px;
+            bottom: 10%;
+            left: 57%;
+            transform: rotate(-12deg);
+        }
+
+        @media (min-width: 1920px) {
+            width: 280px;
+            bottom: 1.8%;
+            left: 71.4%;
+            transform: rotate(2deg);
+        }
+    }
+
+    &__pic--mines {
+        width: 130px;
+        left: 5.5%;
+        bottom: 15%;
+        z-index: 2;
+
+        @media (min-width: 768px) {
+            width: 224px;
+            left: 14.5%;
+            bottom: 13.4%;
+            z-index: 2;
+        }
+
+        @media (min-width: 1920px) {
+            width: 480px;
+            left: 6.1%;
+            bottom: -0.6%;
+            z-index: 2;
+        } 
+    }
+
+    &__pic--plane {
+        width: 88px;
+        bottom: 19.7%;
+        left: 40%;
+        z-index: 2;
+
+        @media (min-width: 768px) {
+            width: 149px;
+            bottom: 18.7%;
+            left: 42.4%;
+            z-index: 2;
+        }
+
+        @media (min-width: 1920px) {
+            width: 294px;
+            bottom: 22.3%;
+            left: 65.4%;
+            z-index: 2;
+        } 
+    }
+
+    &__pic--baloon {
+        width: 182px;
+        bottom: 25.2%;
+        left: 44%;
+        transform: rotate(-35deg);
+        z-index: 2;
+
+        @media (min-width: 768px) {
+            width: 313px;
+            bottom: 23%;
+            left: 46%;
+            transform: rotate(-27deg);
+            z-index: 2;
+        }
+
+        @media (min-width: 1024px) {
+            width: 355px;
+            bottom: 43%;
+            right: -139px;
+            left: auto;
+            transform: rotate(-27deg);
+            z-index: 2;
+            opacity: 0.7;
+        }
+
+        @media (min-width: 1920px) {
+            width: 614px;
+            bottom: 37%;
+            left: 61.8%;
+            transform: rotate(1deg);
+            z-index: 2;
+            opacity: 1;
+        } 
+    }
+
+    &__pic--man {
+        width: 278px;
+        bottom: 10%;
+        left: -109px;
+
+        @media (min-width: 768px) {
+            width: 480px;
+            bottom: 7.6%;
+            left: -113px;
+        }
+
+        @media (min-width: 1920px) {
+            width: 937px;
+            bottom: -5.4%;
+            left: -293px;
+        }
+    }
+
+    &__pic--woman {
+        width: 376px;
+        bottom: 6.4%;
+        right: -80px;
+        
+        @media (min-width: 768px) {
+            width: 630px;
+            bottom: 5.1%;
+            right: -111px;
+        }
+
+        @media (min-width: 1920px) {
+            width: 1231px;
+            bottom: -11.9%;
+            right: -217px;
+        }
+    }
+}
