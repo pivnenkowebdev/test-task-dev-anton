@@ -439,7 +439,7 @@ textarea {
 }
 .main-header__pic--diamond-blur {
   width: 90px;
-  left: -52px;
+  left: -45px;
   top: 29.5%;
   transform: rotate(-35deg);
 }
@@ -461,14 +461,14 @@ textarea {
 }
 .main-header__pic--diamond-quality {
   width: 60px;
-  right: -34px;
+  right: -25px;
   top: 15%;
   transform: rotate(107deg);
 }
 @media (min-width: 768px) {
   .main-header__pic--diamond-quality {
     width: 149px;
-    right: -73px;
+    right: -60px;
     top: 10.6%;
     transform: rotate(106deg);
     z-index: 5;
@@ -479,7 +479,7 @@ textarea {
     top: auto;
     width: 166px;
     bottom: 10.2%;
-    left: -3.1%;
+    left: -2.6%;
     transform: rotate(1deg);
   }
 }
@@ -508,7 +508,7 @@ textarea {
 }
 .main-header__pic--mines {
   width: 130px;
-  left: 5.5%;
+  left: 8.5%;
   bottom: 15%;
   z-index: 2;
 }
@@ -538,7 +538,7 @@ textarea {
   .main-header__pic--plane {
     width: 149px;
     bottom: 18.7%;
-    left: 42.4%;
+    left: 41.4%;
     z-index: 2;
   }
 }
@@ -580,7 +580,7 @@ textarea {
 @media (min-width: 1920px) {
   .main-header__pic--baloon {
     width: 614px;
-    bottom: 37%;
+    bottom: 36%;
     left: 61.8%;
     transform: rotate(1deg);
     z-index: 2;
@@ -590,7 +590,7 @@ textarea {
 .main-header__pic--man {
   width: 278px;
   bottom: 10%;
-  left: -109px;
+  left: -103px;
 }
 @media (min-width: 768px) {
   .main-header__pic--man {
@@ -609,7 +609,7 @@ textarea {
 .main-header__pic--woman {
   width: 376px;
   bottom: 6.4%;
-  right: -80px;
+  right: -70px;
 }
 @media (min-width: 768px) {
   .main-header__pic--woman {
@@ -626,6 +626,23 @@ textarea {
   }
 }
 
+.guide-section {
+  position: relative;
+}
+.guide-section::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -130px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 150px;
+  background-image: linear-gradient(0deg, rgb(4, 27, 55) 50%, rgba(0, 0, 0, 0) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .guide-section__content {
   padding: 24px 0 36px;
 }
@@ -1165,7 +1182,7 @@ textarea {
 }
 @media (min-width: 400px) {
   .accordeon .accordeon__item.open .accordeon__wrapper-list {
-    height: 190px;
+    height: 230px;
   }
 }
 .accordeon .accordeon__item.open .accordeon__arrow {
@@ -1224,5 +1241,10 @@ textarea {
 .accordeon__answer {
   font-size: 16px;
   font-weight: 400;
+  color: #fff;
+}
+.accordeon__context-text {
+  font-size: 18px;
+  font-weight: 600;
   color: #fff;
 }/*# sourceMappingURL=main.css.map */

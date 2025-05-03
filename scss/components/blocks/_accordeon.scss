@@ -47,7 +47,7 @@
             height: 220px;
 
             @media(min-width: 400px) {
-                height: 190px;
+                height: 230px;
             }
         }
 
@@ -120,6 +120,8 @@
     }
 
     &__context-text {
-
+        font-size: 18px;
+        font-weight: 600;
+        color: vars.$white100;
     }
 }

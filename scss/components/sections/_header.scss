@@ -73,7 +73,7 @@
 
     &__pic--diamond-blur {
         width: 90px;
-        left: -52px;
+        left: -45px;
         top: 29.5%;
         transform: rotate(-35deg);
 
@@ -94,13 +94,13 @@
 
     &__pic--diamond-quality {
         width: 60px;
-        right: -34px;
+        right: -25px;
         top: 15%;
         transform: rotate(107deg);
 
         @media (min-width: 768px) {
             width: 149px;
-            right: -73px;
+            right: -60px;
             top: 10.6%;
             transform: rotate(106deg);
             z-index: 5;
@@ -110,7 +110,7 @@
             top: auto;
             width: 166px;
             bottom: 10.2%;
-            left: -3.1%;
+            left: -2.6%;
             transform: rotate(1deg);
         } 
     }
@@ -139,7 +139,7 @@
 
     &__pic--mines {
         width: 130px;
-        left: 5.5%;
+        left: 8.5%;
         bottom: 15%;
         z-index: 2;
 
@@ -167,7 +167,7 @@
         @media (min-width: 768px) {
             width: 149px;
             bottom: 18.7%;
-            left: 42.4%;
+            left: 41.4%;
             z-index: 2;
         }
 
@@ -206,7 +206,7 @@
 
         @media (min-width: 1920px) {
             width: 614px;
-            bottom: 37%;
+            bottom: 36%;
             left: 61.8%;
             transform: rotate(1deg);
             z-index: 2;
@@ -217,7 +217,7 @@
     &__pic--man {
         width: 278px;
         bottom: 10%;
-        left: -109px;
+        left: -103px;
 
         @media (min-width: 768px) {
             width: 480px;
@@ -235,7 +235,7 @@
     &__pic--woman {
         width: 376px;
         bottom: 6.4%;
-        right: -80px;
+        right: -70px;
         
         @media (min-width: 768px) {
             width: 630px;
