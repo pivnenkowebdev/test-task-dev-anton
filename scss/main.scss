@@ -5,8 +5,10 @@
 // sections
 @use './components/sections/header';
 @use './components/sections/guide-section';
+@use './components/sections/accordeon-section';
 
 // blocks
 @use './components/blocks/hero';
 @use './components/blocks/action-link';
 @use './components/blocks/guide-list';
+@use './components/blocks/accordeon';
