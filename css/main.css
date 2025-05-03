@@ -322,12 +322,16 @@ html,
   box-sizing: border-box;
 }
 
+ul, ol, li {
+  list-style: none;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  background-color: #041B37;
 }
 
 button,
@@ -341,6 +345,17 @@ textarea {
 .container {
   padding: 0 15px;
   margin: 0 auto;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    padding: 0 120px;
+  }
 }
 
 .footer {
@@ -611,6 +626,20 @@ textarea {
   }
 }
 
+.guide-section__content {
+  padding: 24px 0 36px;
+}
+@media (min-width: 768px) {
+  .guide-section__content {
+    padding: 32px 0 60px;
+  }
+}
+@media (min-width: 1920px) {
+  .guide-section__content {
+    padding: 18px 0 75px;
+  }
+}
+
 .hero {
   position: relative;
   height: inherit;
@@ -842,4 +871,171 @@ textarea {
   .action-link {
     font-size: 40px;
   }
+}
+
+.guide-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .guide-list {
+    gap: 52px;
+  }
+}
+@media (min-width: 1024px) {
+  .guide-list {
+    align-items: center;
+  }
+}
+@media (min-width: 1920px) {
+  .guide-list {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.guide-list__item {
+  position: relative;
+  flex-shrink: 0;
+}
+@media (min-width: 1024px) {
+  .guide-list__item {
+    max-width: 800px;
+    width: 100%;
+  }
+}
+@media (min-width: 1920px) {
+  .guide-list__item {
+    max-width: 380px;
+    min-width: 380px;
+  }
+}
+.guide-list__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -28px;
+  display: block;
+  width: 26px;
+  height: 22px;
+  background-image: url(../../../img/icons/arrow-accordeon.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateX(-50%) rotate(180deg);
+}
+@media (min-width: 768px) {
+  .guide-list__item:not(:last-child)::after {
+    width: 30px;
+    height: 30px;
+    bottom: -46px;
+  }
+}
+@media (min-width: 1920px) {
+  .guide-list__item:not(:last-child)::after {
+    width: 30px;
+    height: 30px;
+    bottom: 50%;
+    left: auto;
+    right: -40px;
+    transform: translateY(50%) rotate(90deg);
+  }
+}
+
+.hint {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 17px 15px 20px;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 0;
+}
+.hint::before, .hint::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hint::before {
+  content: "";
+  background: linear-gradient(90deg, rgb(14, 35, 73) 0%, rgb(30, 56, 87) 100%);
+  border-radius: 15px;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+.hint::after {
+  content: "";
+  background: #0E2541;
+  border-radius: 15px;
+  z-index: -1;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+}
+@media (min-width: 768px) {
+  .hint {
+    gap: 15px;
+    padding: 21px 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .hint {
+    padding: 39px 17px 39px 80px;
+  }
+}
+@media (min-width: 1920px) {
+  .hint {
+    padding: 39px 17px 39px 20px;
+  }
+}
+
+.hint__icon {
+  width: 70px;
+  height: 60px;
+  flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .hint__icon {
+    width: 90px;
+    height: 82px;
+  }
+}
+
+.hint__descriprion {
+  line-height: 1.6;
+  font-size: 18px;
+}
+@media (min-width: 768px) {
+  .hint__descriprion {
+    font-size: 22px;
+    line-height: 0.8;
+  }
+}
+@media (min-width: 1920px) {
+  .hint__descriprion {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}
+
+.hint__text {
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+}
+
+.hint__context {
+  background: linear-gradient(90deg, rgb(17, 70, 205) 0%, rgb(78, 163, 245) 100%);
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  font-size: inherit;
+  text-transform: uppercase;
 }/*# sourceMappingURL=main.css.map */

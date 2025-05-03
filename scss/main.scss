@@ -4,7 +4,9 @@
 
 // sections
 @use './components/sections/header';
+@use './components/sections/guide-section';
 
 // blocks
 @use './components/blocks/hero';
 @use './components/blocks/action-link';
+@use './components/blocks/guide-list';

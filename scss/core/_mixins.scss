@@ -53,12 +53,10 @@
     }
 }
 
-@mixin text-style-stroke($color: vars.$black100, $size, $weight, $stroke-color, $stroke-width) {
-    font-size: $size;
-    font-weight: $weight;
+@mixin gradient-text($gradient, $font-weight: normal, $font-size: inherit) {
+    background: $gradient;
+    background-clip: text;
     color: transparent;
-    -webkit-text-stroke: $stroke-width $stroke-color;
-    // Firefox
-    text-shadow: 
-    0 0 0 $stroke-color;
+    font-weight: $font-weight;
+    font-size: $font-size;
 }
